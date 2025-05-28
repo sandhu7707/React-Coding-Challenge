@@ -109,8 +109,9 @@ function App() {
     if(!match){
       return <>{name}, Roll Number: {result.rollNumber}</>
     }
-    name = name.slice(match.index+match[0].length, name.length)
-    return <><b>{match[0]}</b>{name}, Roll Number: {result.rollNumber}</>;
+    let nameBefore = name.slice(0, match.index)
+    let nameAfter = name.slice(match.index+match[0].length, name.length)
+    return <>{nameBefore}<b>{match[0]}</b>{nameAfter}, Roll Number: {result.rollNumber}</>;
   }
 
   window.onclick = (e) => {
