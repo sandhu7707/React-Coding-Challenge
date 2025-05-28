@@ -31,7 +31,7 @@
 * when a student is selected out of search results: console.log(`selected student, `, selectedStudent)
 
 #### features:
-* basic search with lazy loading as per requirements
+* basic search with lazy loading and pagination(with limit set to 5) as per requirements
 * loading json from file, allows for multiple files and sharding possibilities
 * debounce, configurable by changing debounceDelay const in App.js
 * matching letters in search results are bold
