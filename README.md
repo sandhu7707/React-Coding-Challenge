@@ -21,4 +21,10 @@
 * when new results state takes effect: console.log(`results updated, new results: `, results)
 * when a student is selected out of search results: console.log(`selected student, `, selectedStudent)
 
-PS:  this version is implemented without any help from external resources/googling
+PS:  this version is implemented with some external help from online resources
+
+enhancements from version one:
+* loading json from file, allows for multiple files and sharding possibilities
+* debounce, configurable by changing debounceDelay const in App.js
+* matching letters in search results are bold
+* better UI: clear search on click outside the input, stable layout using absolute positioning for search results
