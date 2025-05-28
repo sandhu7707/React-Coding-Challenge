@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.search-result{
+  font-size: medium;
+  border: solid 1px;
+  margin: 0;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.search-result:hover{
+  background-color: beige;
+  cursor: pointer;
+}
+
+.selected-result{
+  background-color: aliceblue;
+}
+
+.search-container{
+  width: 50%;
+  display: grid;
+  height: 100%;
+  align-content: space-evenly;
+}
+
+.selected-result-row{
+  text-align: justify;
+}
