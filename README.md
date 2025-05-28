@@ -8,7 +8,13 @@
 * Express.js backend: https://github.com/sandhu7707/express-js-on-vercel-
 
 ### Please note that vercel deployments are slightly different than code in this repo; Express backend on vercel fails attempting to read json files, so the data is declared in an in-memory variable. for runtime loading of files, please test the code localy.
+<hr>
 
+***[update:]*** ***I was able to fix the issue in express backend, the new deployments for those(latest) are :***    
+- vercel:  [frontend](https://create-react-app-latest-version.vercel.app) and [backend](https://express-js-on-vercel-tests-git-main-sandhu7707s-projects.vercel.app)
+- github: [frontend](https://github.com/sandhu7707/create-react-app-latest-version/tree/main) and [backend](https://github.com/sandhu7707/express-js-on-vercel-tests/tree/main?tab=readme-ov-file) 
+
+<hr>
 ### Prerequisites
 * node (tested with node version 22.15.1)
 
