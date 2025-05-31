@@ -24,7 +24,8 @@
 * cd React Coding Challenge
 
 #### run backend
-* node backend/server.js
+* cd backend
+* node server.js
 
 ### run frontend
 * cd frontend/searchbar-lazy-loading
