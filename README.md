@@ -13,7 +13,7 @@
 ***[update:]*** ***I was able to fix the issue in express backend, the new deployments for those(latest) are :***    
 - vercel:  [frontend](https://create-react-app-latest-version.vercel.app) and [backend](https://express-js-on-vercel-tests-git-main-sandhu7707s-projects.vercel.app)
 - github: [frontend](https://github.com/sandhu7707/create-react-app-latest-version/tree/main) and [backend](https://github.com/sandhu7707/express-js-on-vercel-tests/tree/main?tab=readme-ov-file) 
-- please check branch [dev](https://github.com/sandhu7707/React-Coding-Challenge/tree/dev) in this repo for the latest code
+- please check branch [dev](https://github.com/sandhu7707/React-Coding-Challenge/tree/dev) in this repo for the latest code with fixed bugs, better adherence to react rules
 <hr>
 
 ### Prerequisites
