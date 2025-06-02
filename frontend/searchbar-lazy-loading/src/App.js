@@ -2,7 +2,7 @@ import './App.css';
 import { useEffect, useReducer, useRef } from 'react';
 
 const LIMIT = 5;
-const DEBOUNCE_DELAY = 500;
+const DEBOUNCE_DELAY = 200;
 
 const initialState = {
   searchStrVal: '',
@@ -62,12 +62,6 @@ function reducers(state, action) {
         searchStrVal: data
       }
     }
-    case 'fetch-started': {
-      return {
-        ...state,
-        fetchTrigger: false
-      }
-    }
     default: {
       console.error('reducer action not defined!')
       return state;
@@ -98,10 +92,11 @@ function App() {
     }
   }
 
-  const debounce = useRef({ clear: null, time: null });
   useEffect(() => {
+    let clear;
     if (searchStrVal.length >= 3 && results.length < LIMIT) {
       const fetchNames = (nameStr) => {
+        console.log("fetching data for nameStr: " + nameStr)
         fetch(`http://localhost:8080/search/name/${nameStr}/${LIMIT}`)
         .then((data) => data.json())
         .then((data) => {
@@ -109,24 +104,14 @@ function App() {
         })
       
       }
-      let de = debounce.current;
-      let delay = DEBOUNCE_DELAY;
-      if (de.time) {
-        let elapsed = document.timeline.currentTime - de.time
-        if (elapsed < de.delay) {
-          clearTimeout(de.clear);
-          delay = de.delay - elapsed;
-        }
-      }
       let nameStr = searchStrVal.toLowerCase()
-      let clear = setTimeout(() => fetchNames(nameStr), delay);
-      dispatch({type: 'fetch-started'})
-      debounce.current = { clear: clear, time: document.timeline.currentTime, delay: delay }
+      clear = setTimeout(() => fetchNames(nameStr), DEBOUNCE_DELAY);
     }
     else if (searchStrVal.length < 3) {
       dispatch({ type: 'reset-results' })
     }
 
+    return () => clearTimeout(clear)
   }, [searchStrVal])
 
   function handleSelect(rollNumber) {
