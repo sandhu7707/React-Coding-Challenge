@@ -1,25 +1,18 @@
 ### Search Bar with Lazy Load Function
 
+#### *If you're visiting from FleetPulse, please note this code has been updated since submission, please refer to the branch [second-version](https://github.com/sandhu7707/React-Coding-Challenge/tree/second-version) for code snapshot at the time of submission*
+
+
 ### Vercel Deployments
-* ReactJS app: https://create-react-app-git-main-sandhu7707s-projects.vercel.app/
-* Express.js backend: https://express-js-on-vercel-git-main-sandhu7707s-projects.vercel.app/
-#### Github repos used for vercel deployments are different, please refer below for those:
-* ReactJS app: https://github.com/sandhu7707/create-react-app
-* Express.js backend: https://github.com/sandhu7707/express-js-on-vercel-
+frontend and backend in this repo is split into two different repos and deployed to vercel, following are relevant links:
 
-### Please note that vercel deployments are slightly different than code in this repo; Express backend on vercel fails attempting to read json files, so the data is declared in an in-memory variable. for runtime loading of files, please test the code localy.
-<hr>
-
-***[update:]*** ***I was able to fix the issue in express backend, the new deployments for those(latest) are :***    
 - vercel:  [frontend](https://create-react-app-latest-version.vercel.app) and [backend](https://express-js-on-vercel-tests-git-main-sandhu7707s-projects.vercel.app)
 - github: [frontend](https://github.com/sandhu7707/create-react-app-latest-version/tree/main) and [backend](https://github.com/sandhu7707/express-js-on-vercel-tests/tree/main?tab=readme-ov-file) 
-- please check branch [dev](https://github.com/sandhu7707/React-Coding-Challenge/tree/dev) in this repo for the latest code with fixed bugs, optimal use of state and effects, better stability with reducer and ref  
-<hr>
 
-### Prerequisites
+### Prerequisites to run locally
 * node (tested with node version 22.15.1)
 
-### Steps to run
+### Steps to run locally
 * git clone https://github.com/sandhu7707/React-Coding-Challenge.git
 * cd React Coding Challenge
 
@@ -27,20 +20,11 @@
 * cd backend
 * node server.js
 
-### run frontend
+#### run frontend
 * cd frontend/searchbar-lazy-loading
 * npm start
 
-#### I left following console logs in for better analysis
-* when a fetch call is made to backend for more matches: console.log(`fetching for ${nameStr} with limit ${newLimit}`)
-* when the fetch call returns any new results that have not already been loaded: console.log(`new students loaded`)
-* when the fetch call didn't return any new results: console.log(`no new results`)
-* when new results state takes effect: console.log(`results updated, new results: `, results)
-* when a student is selected out of search results: console.log(`selected student, `, selectedStudent)
-
-#### features:
-* basic search with lazy loading and pagination(with limit set to 5) as per requirements
-* loading json from file, allows for multiple files and sharding possibilities
-* debounce, configurable by changing debounceDelay const in App.js
-* matching letters in search results are bold
-* clear search on click outside the input, stable layout using absolute positioning for search results
+### enhancements since [second-version](https://github.com/sandhu7707/React-Coding-Challenge/tree/second-version)
+* optimal use of states and effects
+* no redundant re renders
+* reducers for better code readability, mantainability
