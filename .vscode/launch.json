@@ -6,11 +6,14 @@
     "configurations": [
 
         {
-            "type": "chrome",
+            "type": "node",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:3000",
-            "webRoot": "${workspaceFolder}"
+            "name": "Launch Program",
+            // "url": "http://localhost:8080",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\backend\\server.js"
         }
     ]
 }

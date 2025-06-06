@@ -1,8 +1,5 @@
 ### Search Bar with Lazy Load Function
 
-#### *If you're visiting from FleetPulse, please note this code has been updated since submission, please refer to the branch [second-version](https://github.com/sandhu7707/React-Coding-Challenge/tree/second-version) for code snapshot at the time of submission*
-
-
 ### Vercel Deployments
 frontend and backend in this repo is split into two different repos and deployed to vercel, following are relevant links:
 
